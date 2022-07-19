@@ -1,0 +1,350 @@
+/* 
+
+01 Typography 
+
+font size system
+10 12 14 16 18 20 24 30 36 44 52 62 74 86 98
+
+
+
+font weight
+default 400
+line height 
+default 1
+
+
+
+ 02 colors
+ primary: #e67e22
+  tintes 
+  shades
+  accent 
+  greys #555
+#333
+
+#fae5d3
+  05 shadows
+
+
+
+
+  06 border radius
+
+
+  07 white space
+  spcacing system
+ 2 4 8 12 16 24 32 48 64 80 96 128
+*/
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+*:focus {
+  outline: none;
+  /* outline: 4px solid #fae5d3; */
+  box-shadow: 0 0 0 0.8rem #cf711fab;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  /* only work their is nothing absolutely to body */
+  overflow-x: hidden;
+}
+
+/*******************************/
+/* MObile Nav */
+/*****************************/
+
+.btn-mobile-nav {
+  border: none;
+  background-color: #fae5d3;
+  cursor: pointer;
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+/*******************************/
+/* GENRAL REUSABLE COMPONENTS */
+/*****************************/
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+.grid--2-ccols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-ccols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-ccols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid---center-v {
+  align-self: center;
+}
+.grid---center-h {
+  justify-content: center;
+}
+.grid--5--cols {
+  grid-template-columns:
+    1.5fr 1.5fr
+    1fr 1fr 1fr;
+}
+.heading-primary,
+.heading-secondry {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+
+  line-height: 1.05;
+
+  margin-bottom: 3.2rem;
+  text-shadow: 0 5px 5px #e67d2271;
+}
+.heading-secondry {
+  font-size: 4.4rem;
+  line-height: 0.8;
+  margin-bottom: 9.6rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 600;
+
+  /* =============for BTN=========== */
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+.btn--form {
+  background-color: #2e190798;
+  color: #fae5d3;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fae5d3;
+  color: #333;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.233);
+}
+.btn--outline:hover,
+.btn--outline:active {
+  color: #e67e22;
+  /* to add boder inside button /links */
+  box-shadow: inset 0 0 3px #fff;
+}
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.margin-right-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.feature-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  color: #555;
+
+  padding: 2rem 6rem;
+}
+.heading-featured {
+  font-size: 1.4rem;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #888;
+}
+.link:link,
+.link:visited {
+  color: #cf711f;
+  font-size: 1.8rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.5s;
+}
+.link:hover,
+.link:active {
+  color: #e67e22;
+  border-bottom: 1px solid transparent;
+}
+.center-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 4.8rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.meals:hover {
+  transform: translate(0, -2rem);
+  transition: all 0.5s;
+  box-shadow: 0 3rem 6.4rem 0 rgba(0, 0, 0, 0.433);
+  cursor: pointer;
+}
+.list-items:hover {
+  background-color: #cf711f;
+  transition: all 0.5s;
+  border-radius: 100px;
+  max-width: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+/* -------Call to action secton----- */
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.212);
+  border-radius: 15px;
+  background-image: linear-gradient(to right bottom, #eea564, #cf711f);
+  /* temp */
+
+  overflow: hidden;
+}
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(39, 33, 28, 0.507),
+      rgba(20, 17, 14, 0.322)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #2e1907;
+}
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 6rem;
+}
+.cta .heading-secondry {
+  color: #2e1907;
+  margin-bottom: 3.2rem;
+}
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+.cta-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+.cta-form label {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  border: none;
+  color: inherit;
+  background-color: #fae5d3;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.137);
+}
+.cta-form input ::placeholder {
+  color: rgba(170, 170, 170, 0.486);
+}
+.cta-form select {
+  width: 100%;
+  font-family: inherit;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.034);
+}
