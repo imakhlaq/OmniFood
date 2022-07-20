@@ -1,1 +1,1 @@
-THis is my Omni food project
+This is my Omnifood project. A food website idea.
